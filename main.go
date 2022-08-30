@@ -55,7 +55,8 @@ func camelCase(s string) string {
 		return s
 	}
 
-	return strings.ToUpper(string(s[0])) + strings.ToLower(string(s[1:]))
+	// The user has the responsibility to put the uppercase on multiple words names
+	return strings.ToUpper(string(s[0])) + string(s[1:])
 }
 
 func fileExists(name string) bool {
